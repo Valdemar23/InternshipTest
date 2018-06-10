@@ -17,4 +17,6 @@ public class Student {
     public Knowledge getKnowledge(){
         return personKnowledge;
     }
+
+
 }
