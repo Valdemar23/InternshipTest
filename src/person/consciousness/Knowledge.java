@@ -6,4 +6,6 @@ public class Knowledge {
         this.level=level;
         //TODO: Implementation is needed
     }
+
+
 }
