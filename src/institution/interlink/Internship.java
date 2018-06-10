@@ -3,6 +3,7 @@ package institution.interlink;
 import person.Student;
 
 public class Internship {
+
     public Internship(String name) {
         //TODO: Implementation is needed
     }
