@@ -10,10 +10,9 @@ public class University {
     private String name;
     private Student student;
     private ArrayList<Student> students;
-    protected float avg;
+    private float avg;
     public University(String name) {
         this.name=name;
-
         //TODO: Implementation is needed
     }
 
@@ -27,7 +26,7 @@ public class University {
     }
 
     public void setStudent(Student student) {
-        for(students)
+
         //TODO: Implementation is needed
     }
 
@@ -62,11 +61,9 @@ public class University {
         for(Student student:arr){
             Knowledge knowledge=student.getKnowledge();
             sum+=knowledge.getLevel();//Integer.parseInt(String.valueOf(student.getKnowledge()))
-            System.out.println(student.getName()+" "+sum);
         }
 
         avg=sum/arr.size();
-        System.out.println(avg);
         return avg;
     }
 }

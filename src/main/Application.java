@@ -16,7 +16,7 @@ public class Application {
         Student student6=new Student("Ivan",new Knowledge(4));
         student2.setKnowledge(new Knowledge(5));
         student3.setKnowledge(new Knowledge(8));
-        student4.setKnowledge(new Knowledge(6));
+        student4.setKnowledge(new Knowledge(7));
         student5.setKnowledge(new Knowledge(2));
         ArrayList <Student>studentArrayList=new ArrayList<>();
         studentArrayList.add(student6);
@@ -33,7 +33,7 @@ public class Application {
         university.addStudent(new Student("Andrew Kostenko",new Knowledge(7)));
         university.addStudent(new Student("Julia Veselkina",new Knowledge(7)));
         university.addStudent(new Student("Maria Perechrest",new Knowledge(7)));
-        university.calculateAvg(studentArrayList);
+        float avg=university.calculateAvg(studentArrayList);
 
 
 
@@ -44,8 +44,12 @@ public class Application {
 
 
         Internship internship = new Internship("Interlink");
+        //internship.
+        internship.addStudents(university,avg);
         System.out.println("List of internship's students:");
+        ArrayList<Student>students=new ArrayList<>();
+        for(Student student:students) System.out.println(String.valueOf(student.getName().toString()));
         System.out.println(internship.getStudents());
-        System.out.println("AVG: "+university.avg);
+        System.out.println("AVG: "+avg);
     }
 }
