@@ -9,7 +9,7 @@ public class University {
     private int id;
     private String name;
     private Student student;
-    private ArrayList<Student> students;
+    private ArrayList<Student> students=new ArrayList<>();
     private float avg;
     public University(String name) {
         this.name=name;

@@ -33,23 +33,49 @@ public class Application {
         university.addStudent(new Student("Andrew Kostenko",new Knowledge(7)));
         university.addStudent(new Student("Julia Veselkina",new Knowledge(7)));
         university.addStudent(new Student("Maria Perechrest",new Knowledge(7)));
-        float avg=university.calculateAvg(studentArrayList);
-
-
+        float avg=0;
+        avg=university.calculateAvg(studentArrayList);
 
         for(Student student:university.getStudents()){
             Knowledge knowledge=student.getKnowledge();
             System.out.println(student.getName()+" "+knowledge.getLevel());
         }
 
-
+        System.out.println("AVG: "+avg);
         Internship internship = new Internship("Interlink");
-        //internship.
         internship.addStudents(university,avg);
         System.out.println("List of internship's students:");
-        ArrayList<Student>students=new ArrayList<>();
-        for(Student student:students) System.out.println(String.valueOf(student.getName().toString()));
-        System.out.println(internship.getStudents());
-        System.out.println("AVG: "+avg);
+        ArrayList<Student>students=internship.getStudents();
+        for(Student student:students){
+            Knowledge knowledge=student.getKnowledge();
+            System.out.println(student.getName() +" " +knowledge.getLevel());
+        }
+
+
+
+
+        University university1 = new University("CHDTU");
+        university1.addStudent(new Student("Andrew",new Knowledge(6)));
+        university1.addStudent(new Student("Julia",new Knowledge(8)));
+        university1.addStudent(new Student("Maria",new Knowledge(7)));
+        university1.addStudent(new Student("Nastya",new Knowledge(10)));
+        university1.addStudent(new Student("Vova",new Knowledge(9)));
+        System.out.println("List CHDTU");
+        for(Student student:university1.getStudents()){
+            Knowledge knowledge=student.getKnowledge();
+            System.out.println(student.getName()+" "+knowledge.getLevel());
+        }
+        //
+        studentArrayList=null;
+        //studentArrayList.add();
+        university1.setStudents(studentArrayList);
+        avg=university1.calculateAvg(studentArrayList);
+        System.out.println("AVG2: "+avg);
+
+        internship.addStudents(university1,avg);
+        for(Student student:students){
+            Knowledge knowledge=student.getKnowledge();
+            System.out.println(student.getName() +" " +knowledge.getLevel());
+        }
     }
 }

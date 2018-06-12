@@ -11,8 +11,7 @@ public class Internship extends University {
     private String nameIntership;
     private Student student;
     private ArrayList<Student> arrayList=new ArrayList<>();
-    private Knowledge knowledge;
-    University university=new University();
+
 
     public Internship(String name) {
         nameIntership=name;
@@ -20,7 +19,6 @@ public class Internship extends University {
     }
 
     public void setStudent(Student student) {
-
         //this.student=student;
         //TODO: Implementation is needed
     }
@@ -28,20 +26,13 @@ public class Internship extends University {
     public void addStudents(University university,float n){// ArrayList<Student> students
         ArrayList<Student> students=university.getStudents();
         for(Student st:students){
-            System.out.println("Name "+st.getName());
-            Knowledge knowledge=st.getKnowledge();
-            if(knowledge.getLevel()> n){
-                this.arrayList.add(st);
-            }
+            Knowledge knowledge= st.getKnowledge();
+            if(knowledge.getLevel()> n) this.arrayList.add(st);
         }
     }
 
-
     public ArrayList<Student> getStudents() {
         //TODO: Implementation is needed
-
-        return arrayList;//"Andrew Maslenko\nJulia Veselkina\n"
+        return arrayList;
     }
-
-
 }
