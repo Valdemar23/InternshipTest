@@ -2,12 +2,10 @@ package person;
 
 import person.consciousness.Knowledge;
 
-import java.util.ArrayList;
-
 public class Student {
+    private int id;
     private Knowledge personKnowledge;
     private String name;
-
     public Student(String name){
         this.name=name;
     }
@@ -15,7 +13,6 @@ public class Student {
     public Student(String name,Knowledge knowledge) {
         this.name=name;
         personKnowledge=knowledge;
-        //TODO: Implementation is needed
     }
 
     public void setKnowledge(Knowledge knowledge) {
@@ -27,5 +24,7 @@ public class Student {
         return personKnowledge;
     }
 
-    //public ArrayList<>
+    public String getName() {
+        return name;
+    }
 }
