@@ -9,17 +9,12 @@ public class University {
     private int id;
     private String name;
     private Student student;
-    private ArrayList<Student> students=new ArrayList<>();
+    private ArrayList<Student> students;
     private float avg;
     public University(String name) {
         this.name=name;
+        students=new ArrayList<>();
         //TODO: Implementation is needed
-    }
-
-    public University(String name,Student student){
-        this.name=name;
-        this.student=student;
-        this.students.add(student);
     }
 
     public University() {
