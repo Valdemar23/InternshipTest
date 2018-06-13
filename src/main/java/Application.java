@@ -1,13 +1,19 @@
-package main;
-
+import hibernate.HibernateConfig;
 import institution.interlink.Internship;
+import institution.University;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import person.Student;
 import person.consciousness.Knowledge;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Application {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        SessionFactory sessionFactory = HibernateConfig.getSessionFactory();
+        Session session = sessionFactory.openSession();
+
         Student student1=new Student("JC",new Knowledge(12));
         Student student2=new Student("Alex");
         Student student3=new Student("Pool");
@@ -18,7 +24,7 @@ public class Application {
         student3.setKnowledge(new Knowledge(8));
         student4.setKnowledge(new Knowledge(7));
         student5.setKnowledge(new Knowledge(2));
-        ArrayList <Student>studentArrayList=new ArrayList<>();
+        ArrayList <Student>studentArrayList=new ArrayList<Student>();
         studentArrayList.add(student6);
         studentArrayList.add(student5);
         studentArrayList.add(student4);

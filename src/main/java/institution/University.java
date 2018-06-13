@@ -1,19 +1,28 @@
-package main;
+package institution;
 
 import person.Student;
 import person.consciousness.Knowledge;
 
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class University {
-    private int id;
+
+@Table(name="university")
+@MappedSuperclass
+public class University implements Serializable {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="id")
+    private long id;
+    @Column(name="name")
     private String name;
     private Student student;
     private ArrayList<Student> students;
     private float avg;
     public University(String name) {
         this.name=name;
-        students=new ArrayList<>();
+        students=new ArrayList<Student>();
         //TODO: Implementation is needed
     }
 
