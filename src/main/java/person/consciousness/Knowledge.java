@@ -15,7 +15,6 @@ public class Knowledge implements Serializable {
 
     public Knowledge(int level) {
         this.level=level;
-        //TODO: Implementation is needed
     }
 
     public Knowledge(Knowledge knowledge) {

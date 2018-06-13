@@ -22,12 +22,10 @@ public class Internship extends University {
 
     public Internship(String name) {
         nameIntership=name;
-        //TODO: Implementation is needed
     }
 
     public void setStudent(Student student) {
         //this.student=student;
-        //TODO: Implementation is needed
     }
 
     public void addStudents(University university,float n){// ArrayList<Student> students
@@ -39,7 +37,6 @@ public class Internship extends University {
     }
 
     public ArrayList<Student> getStudents() {
-        //TODO: Implementation is needed
         return arrayList;
     }
 }

@@ -6,11 +6,10 @@ import org.hibernate.SessionFactory;
 import person.Student;
 import person.consciousness.Knowledge;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Application {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         SessionFactory sessionFactory = HibernateConfig.getSessionFactory();
         Session session = sessionFactory.openSession();
 
@@ -64,8 +63,7 @@ public class Application {
         university1.addStudent(new Student("Nastya",new Knowledge(10)));
         university1.addStudent(new Student("Vova",new Knowledge(9)));
 
-
-        System.out.println("List CHDTU");
+        System.out.println("\n\nList CHDTU");
         for(Student student:university1.getStudents()){
             Knowledge knowledge=student.getKnowledge();
             System.out.println(student.getName()+" "+knowledge.getLevel());

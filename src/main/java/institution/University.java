@@ -7,9 +7,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-
+@Entity
 @Table(name="university")
-@MappedSuperclass
+//@MappedSuperclass
 public class University implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -23,15 +23,12 @@ public class University implements Serializable {
     public University(String name) {
         this.name=name;
         students=new ArrayList<Student>();
-        //TODO: Implementation is needed
     }
 
     public University() {
     }
 
     public void setStudent(Student student) {
-
-        //TODO: Implementation is needed
     }
 
     public void setStudents(ArrayList<Student> students) {
@@ -45,7 +42,6 @@ public class University implements Serializable {
     public void addStudent(Student student) {
         this.student=student;
         students.add(student);
-        //TODO: Implementation is needed
     }
 
     public String getName() {

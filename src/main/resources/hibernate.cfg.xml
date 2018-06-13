@@ -13,6 +13,6 @@
 		<mapping class="person.Student" />
 		<mapping class="person.consciousness.Knowledge" />
 		<mapping class="institution.University" />
-		<mapping class="institution.interlink.Internship" />
+		<!--<mapping class="institution.interlink.Internship" />викликає помилку-->
 	</session-factory>
 </hibernate-configuration>

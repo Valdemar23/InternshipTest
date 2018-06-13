@@ -26,7 +26,6 @@ public class Student implements Serializable {
 
     public void setKnowledge(Knowledge knowledge) {
         personKnowledge=knowledge;
-        //TODO: Implementation is needed
     }
 
     public Knowledge getKnowledge(){
